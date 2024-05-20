@@ -55,7 +55,7 @@
             align-items: flex-start;
             padding: 20px;
             margin-top: 20px;
-            gap: 20px; /* Added gap between containers */
+            gap: 20px; 
         }
 
         .cart-summary {
@@ -64,7 +64,7 @@
             border-radius: 5px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             width: 60%;
-            max-width: 600px; /* Ensure the receipt container is not too large */
+            max-width: 600px;
         }
 
         .cart-summary ul {
@@ -103,7 +103,7 @@
             border-radius: 5px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             width: 30%;
-            max-width: 400px; /* Ensure the form container is smaller than the receipt */
+            max-width: 400px; 
         }
 
         .form-container input[type="text"],
@@ -191,17 +191,17 @@
     </div>
 
     <script>
-        // Retrieve cart items from local storage
+    
         const cartItems = JSON.parse(localStorage.getItem('cartItems'));
 
-        // Function to display receipt
+      
         function displayReceipt() {
             const receiptContainer = document.getElementById('receipt');
             let total = 0;
 
-            // Check if there are cart items
+           
             if (cartItems && cartItems.length > 0) {
-                // Loop through each cart item and display it in the receipt
+               
                 cartItems.forEach(item => {
                     const subtotal = item.price * item.quantity;
                     total += subtotal;
@@ -217,58 +217,58 @@
                     `;
                 });
                 
-                // Display total
+            
                 receiptContainer.innerHTML += `
                     <div>
                         <h3 class="total-price">Total Price: ₱${total.toFixed(2)}</h3>
                     </div>
                 `;
 
-                // Enable Proceed to Checkout button
+              
                 document.getElementById('proceedBtn').removeAttribute('disabled');
             } else {
-                // Display message if cart is empty
+            
                 receiptContainer.innerHTML = "<p>Your cart is empty.</p>";
             }
         }
 
-        // Call displayReceipt function when the page loads
+   
         window.onload = displayReceipt;
 
-        // Proceed to checkout function
+ 
         function proceedToCheckout() {
-        // Check if user has provided personal information and selected a payment method
+        
         const isPersonalInfoProvided = checkPersonalInfo(); 
         const isPaymentMethodSelected = document.querySelector('input[name="paymentMethod"]:checked');
 
         if (isPersonalInfoProvided && isPaymentMethodSelected) {
-            // Add your checkout logic here
+          
             alert('Thank you for your purchase!');
-            // Redirect to home page after purchase
+            
             window.location.href = "home.html";
         } else {
-            // Prompt user to fill out personal information and select a payment method
+            
             alert('Please fill out your personal information and select a payment method.');
         }
     }
 
-        // Function to check if user has provided personal information
+      
         function checkPersonalInfo() {
             const name = document.getElementById('name').value;
             const contactNumber = document.getElementById('contactNumber').value;
             const email = document.getElementById('email').value;
 
             if (name && contactNumber && email) {
-                return true; // Personal information is provided
+                return true; 
             } else {
-                return false; // Personal information is not provided
+                return false;
             }
         }
 
-        // Clear cart function
+       
         function clearCart() {
             localStorage.removeItem('cartItems');
-            location.reload(); // Reload the page to reflect the changes
+            location.reload(); 
         }
     </script>
 </body>
