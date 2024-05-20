@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: #8f8dc7;
+            color: #321c6e;
+            padding: 1rem 0;
+            text-align: center;
+            position: relative;
+        }
+
+        nav {
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        nav ul li a:active {
+            color: rgb(83, 75, 248);
+            position: relative;
+            top: 2px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Two columns */
+            gap: 20px; /* Gap between items */
+            padding: 20px;
+        }
+        
+        .hero {
+            background: url("C:/Users/PC/Downloads/newjeans header (1).jpg") no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            font-size: 2rem;
+            position: relative;
+            font-size: medium;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .hero:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+        
+        .section {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .section img {
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+            margin-bottom: 10px;
+            align-self: center;
+        }
+
+        .section img:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+
+        .active-link {
+            font-weight: bold;
+        }
+
+        .arrow {
+            cursor: pointer;
+            user-select: none;
+        }
+      
+        .social-media {
+            margin-top: 1rem;
+        }
+
+        .social-media a {
+            color: #321c6e;
+            margin: 0 10px;
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .social-media a:hover {
+            color: #fff;
+        }
+        
+.sectionz {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 20px; /* Add margin top to create space between hero and new releases sections */
+}
+
+.sectionl {
+    background: #fff;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sectionl img {
+    width: 100%;
+    height: auto;
+    max-width: 150px;
+    max-height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    align-self: center;
+}
+
+.sectionl img:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.product-options {
+    margin-top: 10px;
+}
+
+.product-options label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.product-options select,
+.product-options input[type="number"] {
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.product-options input[type="number"]::-webkit-outer-spin-button,
+.product-options input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.btn {
+    display: block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #321c6e;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #8f8dc7;
+}
+
+/* Enhanced Button Styles */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background: #321c6e; /* Updated background color */
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase; /* Make text uppercase */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+.btn:hover {
+    background: #8f8dc7; /* Lighter background on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+
+.active-link {
+    font-weight: bold;
+}
+
+.arrow {
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Additional CSS styles for size and quantity selectors */
+.size-selector,
+.quantity-input {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 200px;
+    box-sizing: border-box;
+    background: #f4f4f4;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    text-align: center; /* Center text inside the input */
+}
+
+.size-selector:focus,
+.quantity-input:focus {
+    border-color: #333;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.quantity-input {
+    -moz-appearance: textfield;
+}
+
+.quantity-input::-webkit-outer-spin-button,
+.quantity-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Center product options */
+.product-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Add some spacing around the labels and selectors */
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+    text-align: center; /* Center the label text */
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1><i>boonee fits</i></h1>
+        <nav>
+            <ul>
+                <li><a href="home.html" onclick="highlightLink(this)">home</a></li>
+                <li><a href="product.html" onclick="highlightLink(this)">products</a></li>
+                <li><a href="cart_summary.html" onclick="highlightLink(this)">cart</a></li>
+                <li><a href="aboutus.html" onclick="highlightLink(this)">about us</a></li>
+                <li><a href="contactus.html" onclick="highlightLink(this)">contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="hero">
+        <!-- Add any content you want to display in the hero section -->
+    </div>
+
+  <h2> new released </h2>
+    <div class="sectionz">
+        <div class="sectionl">
+            <img src="C:/Users/PC/OneDrive/Pictures/bonee fits website/download (34).jpg" alt="Product 1">
+            <h3>bear sailor skirt</h3>
+            <p>550.00 php</p>
+            <div class="product-options">
+                <label for="size1">Size:</label>
+                <select id="size1" class="size-selector">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                </select>
+                <label for="quantity1">Quantity:</label>
+                <input type="number" id="quantity1" class="quantity-input" min="1" value="1">
+            </div>
+            <button class="btn" data-name="bear sailor skirt" data-price="550" data-sizeId="size1" data-quantityId="quantity1">Add to Cart</button>
+        </div>
+        
+        <div class="sectionl">
+            <img src="C:/Users/PC/OneDrive/Pictures/bonee fits website/download (42).jpg" alt="Product 2">
+            <h3>long sleeves</h3>
+            <p>300.00 php</p>
+            <div class="product-options">
+                <label for="size2">Size:</label>
+                <select id="size2" class="size-selector">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                </select>
+                <label for="quantity2">Quantity:</label>
+                <input type="number" id="quantity2" class="quantity-input" min="1" value="1">
+            </div>
+            <button class="btn" data-name="long sleeves" data-price="300" data-sizeId="size2" data-quantityId="quantity2">Add to Cart</button>
+        </div>
+        
+
+        <div class="sectionl">
+            <img src="C:\Users\PC\OneDrive\Pictures\bonee fits website\Please refer to our sizing chart for a guideline….jpg" alt="Product 3">
+            <h3> tank top</h3>
+            <p>300.00 php</p>
+            <div class="product-options">
+                <label for="size3">Size:</label>
+                <select id="size3" class="size-selector">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+
+                </select>
+                <label for="quantity3">Quantity:</label>
+                <input type="number" id="quantity3" class="quantity-input" min="1" value="1">
+            </div>
+            <button class="btn" data-name=" tank top" data-price="300" data-sizeId="size3" data-quantityId="quantity3">Add to Cart</button>
+        </div>
+
+        <div class="sectionl">
+            <img src="C:\Users\PC\OneDrive\Pictures\bonee fits website\download (39).jpg" alt="Product 1">
+            <h3>knitted long sleeves</h3>
+            <p>420.00 php</p>
+            <div class="product-options">
+                <label for="size4">Size:</label>
+                <select id="size4" class="size-selector">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+
+                </select>
+                <label for="quantity4">Quantity:</label>
+                <input type="number" id="quantity4" class="quantity-input" min="1" value="1">
+            </div>
+            <button class="btn" data-name="knitted long sleeves" data-price="420" data-sizeId="size4" data-quantityId="quantity4">Add to Cart</button>
+        </div>
+    </div>
+    <h1><marquee behavior="scroll" direction="left"><I>boonee fits boonee fits boonee fits boonee fits boonee fits </I></marquee></h1>
+
+    <div class="container">
+        <div class="section" onmouseover="expandSection(this)" onmouseout="collapseSection(this)">
+            <img src="C:\Users\PC\OneDrive\Pictures\bonee fits website\download (37).jpg">
+            
+        </div>
+        <div class="section" onmouseover="expandSection(this)" onmouseout="collapseSection(this)">
+            <img src="C:\Users\PC\OneDrive\Pictures\bonee fits website\download (36).jpg">
+        </div>
+    </div>
+
+    <footer>
+        <center>
+        <div class="social-media">
+           <b><i> <p> follow us in our social media plugin:</p></i> </b>
+            <a href="https://www.facebook.com/official.newjeans" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://x.com/NewJeans_twt" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/newjeans_official/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <br>
+            <h5><p><center>© 2024 <i>boonee fits</i>, All rights reserved.</p></center></h5>
+        </center>
+        </div>
+
+    </footer>
+   
+
+    <script>
+        // Function to highlight active link in navigation
+        function highlightLink(link) {
+            const links = document.querySelectorAll('nav ul li a');
+            links.forEach(item => {
+                item.classList.remove('active-link');
+            });
+            link.classList.add('active-link');
+        }
+
+        // Function to expand section on hover
+        function expandSection(section) {
+            section.style.transform = 'scale(1.05)';
+            section.style.opacity = '0.9';
+        }
+
+        // Function to collapse section on mouseout
+        function collapseSection(section) {
+            section.style.transform = 'scale(1)';
+            section.style.opacity = '1';
+        }
+    </script>
+</body>
+</html>

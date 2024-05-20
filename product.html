@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homepage</title>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #8f8dc7;
+    color: #321c6e;
+    padding: 1rem 0;
+    text-align: center;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-start;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+nav ul li a:active {
+    color: rgb(83, 75, 248);
+    position: relative;
+    top: 2px;
+}
+
+.container {
+    padding: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.hero {
+    background: url("C:/Users/PC/OneDrive/Pictures/bonee fits website/Twitter banner Minji ver_ (NewJeans).jpg") no-repeat center center/cover;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    font-size: 2rem;
+    position: relative;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: medium;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    margin-bottom: 20px; /* Add margin bottom to create space between hero and new releases sections */
+}
+
+.sections {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 20px; /* Add margin top to create space between hero and new releases sections */
+}
+
+.section {
+    background: #fff;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section img {
+    width: 100%;
+    height: auto;
+    max-width: 150px;
+    max-height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    align-self: center;
+}
+
+.section img:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.product-options {
+    margin-top: 10px;
+}
+
+.product-options label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.product-options select,
+.product-options input[type="number"] {
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.product-options input[type="number"]::-webkit-outer-spin-button,
+.product-options input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.btn {
+    display: block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #321c6e;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #8f8dc7;
+}
+
+/* Enhanced Button Styles */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background: #321c6e; /* Updated background color */
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase; /* Make text uppercase */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+.btn:hover {
+    background: #8f8dc7; /* Lighter background on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+
+.active-link {
+    font-weight: bold;
+}
+
+.arrow {
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Additional CSS styles for size and quantity selectors */
+.size-selector,
+.quantity-input {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 200px;
+    box-sizing: border-box;
+    background: #f4f4f4;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    text-align: center; /* Center text inside the input */
+}
+
+.size-selector:focus,
+.quantity-input:focus {
+    border-color: #333;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.quantity-input {
+    -moz-appearance: textfield;
+}
+
+.quantity-input::-webkit-outer-spin-button,
+.quantity-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Center product options */
+.product-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Add some spacing around the labels and selectors */
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+    text-align: center; /* Center the label text */
+}
+.cart-icon {
+                position: absolute;
+                top: 50px;
+                right: 20px;
+                cursor: pointer;
+            }
+            .cart-dropdown {
+        position: absolute;
+        top: 90px;
+        right: 20px;
+        background: #b0b0ec;
+        width: 300px;
+        padding: 20px;
+        z-index: 1001; /* Set a higher z-index */
+        font-size: 14px; /* Adjust font size */
+    }
+
+    .cart-dropdown h3 {
+        margin-top: 0;
+        font-size: 16px; /* Adjust heading font size */
+    }
+
+    .cart-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+        font-size: 14px; /* Adjust font size */
+    }
+
+    .cart-item button {
+        background: #333;
+        color: #fff;
+        padding: 5px 10px; /* Adjust button padding */
+        cursor: pointer;
+        font-size: 12px; /* Adjust button font size */
+    }
+            .active-link {
+                font-weight: bold;
+            }
+
+            .arrow {
+                cursor: pointer;
+                user-select: none;
+            }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1><i>boonee fits</i></h1>
+        <nav>
+            <ul>
+                <li><a href="home.html" onclick="highlightLink(this)">home</a></li>
+                <li><a href="product.html" onclick="highlightLink(this)">products</a></li>
+                <li><a href="cart_summary.html" onclick="highlightLink(this)">cart</a></li>
+                <li><a href="aboutus.html" onclick="highlightLink(this)">about us</a></li>
+                <li><a href="contactus.html" onclick="highlightLink(this)">contact us</a></li>
+            </ul>
+        </nav>
+        <img src="https://img.icons8.com/material-outlined/24/ffffff/shopping-cart--v1.png" alt="Cart" class="cart-icon" onclick="toggleCart()">
+        <div class="cart-dropdown" id="cart-dropdown"></div>
+    </header>
+    <div class="hero"></div>
+    <div class="container">
+        <h2>new releases</h2>
+        
+        <div class="sections">
+            <div class="section">
+                <img src="C:/Users/PC/OneDrive/Pictures/bonee fits website/download (34).jpg" alt="Product 1">
+                <h3>bear sailor skirt</h3>
+                <p>550.00 php</p>
+                <div class="product-options">
+                    <label for="size1">Size:</label>
+                    <select id="size1" class="size-selector">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                    </select>
+                    <label for="quantity1">Quantity:</label>
+                    <input type="number" id="quantity1" class="quantity-input" min="1" value="1">
+                </div>
+                <button class="btn" data-name="bear sailor skirt" data-price="550" data-sizeId="size1" data-quantityId="quantity1">Add to Cart</button>
+            </div>
+            
+            <div class="section">
+                <img src="C:/Users/PC/OneDrive/Pictures/bonee fits website/download (42).jpg" alt="Product 2">
+                <h3>long sleeves</h3>
+                <p>300.00 php</p>
+                <div class="product-options">
+                    <label for="size2">Size:</label>
+                    <select id="size2" class="size-selector">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                    </select>
+                    <label for="quantity2">Quantity:</label>
+                    <input type="number" id="quantity2" class="quantity-input" min="1" value="1">
+                </div>
+                <button class="btn" data-name="long sleeves" data-price="300" data-sizeId="size2" data-quantityId="quantity2">Add to Cart</button>
+            </div>
+            
+    
+            <div class="section">
+                <img src="C:\Users\PC\OneDrive\Pictures\bonee fits website\Please refer to our sizing chart for a guideline….jpg" alt="Product 3">
+                <h3> tank top</h3>
+                <p>300.00 php</p>
+                <div class="product-options">
+                    <label for="size3">Size:</label>
+                    <select id="size3" class="size-selector">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+    
+                    </select>
+                    <label for="quantity3">Quantity:</label>
+                    <input type="number" id="quantity3" class="quantity-input" min="1" value="1">
+                </div>
+                <button class="btn" data-name=" tank top" data-price="300" data-sizeId="size3" data-quantityId="quantity3">Add to Cart</button>
+            </div>
+    
+            <div class="section">
+                <img src="C:\Users\PC\OneDrive\Pictures\bonee fits website\download (39).jpg" alt="Product 1">
+                <h3>knitted long sleeves</h3>
+                <p>420.00 php</p>
+                <div class="product-options">
+                    <label for="size4">Size:</label>
+                    <select id="size4" class="size-selector">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+    
+                    </select>
+                    <label for="quantity4">Quantity:</label>
+                    <input type="number" id="quantity4" class="quantity-input" min="1" value="1">
+                </div>
+                <button class="btn" data-name="knitted long sleeves" data-price="420" data-sizeId="size4" data-quantityId="quantity4">Add to Cart</button>
+            </div>
+        </div>
+    <h2> collections </h2>
+            <div class="sections">
+            <div class="section">
+                <img src="C:\Users\PC\OneDrive\Pictures\bonee fits website\c6a2d3d0-2325-4e2e-9c68-55a99ad16cd4.jpg" alt="Product 1">
+                <h3>betty boop top</h3>
+                <p>420.00 php</p>
+                <div class="product-options">
+                    <label for="size5">Size:</label>
+                    <select id="size5" class="size-selector">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+    
+                    </select>
+                    <label for="quantity5">Quantity:</label>
+                    <input type="number" id="quantity5" class="quantity-input" min="1" value="1">
+                </div>
+                <button class="btn" data-name="betty boop top" data-price="420" data-sizeId="size5" data-quantityId="quantity5">Add to Cart</button>
+            </div>
+
+            <div class="section">
+                <img src="C:\Users\PC\OneDrive\Pictures\bonee fits website\download (38).jpg" alt="Product 1">
+                <h3> denim dress</h3>
+                <p>350.00 php</p>
+                <div class="product-options">
+                    <label for="size6">Size:</label>
+                    <select id="size6" class="size-selector">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+    
+                    </select>
+                    <label for="quantity6">Quantity:</label>
+                    <input type="number" id="quantity1" class="quantity-input" min="1" value="1">
+                </div>
+                <button class="btn" data-name="denim dress" data-price="350" data-sizeId="size6" data-quantityId="quantity6">Add to Cart</button>
+            </div>
+
+            <div class="section">
+                <img src="C:\Users\PC\OneDrive\Pictures\bonee fits website\download (44).jpg" alt="Product 1">
+                <h3>denim belt tube top</h3>
+                <p>220.00 php</p>
+                <div class="product-options">
+                    <label for="size7">Size:</label>
+                    <select id="size7" class="size-selector">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+    
+                    </select>
+                    <label for="quantity7">Quantity:</label>
+                    <input type="number" id="quantity7" class="quantity-input" min="1" value="1">
+                </div>
+                <button class="btn" data-name="denim belt tube top" data-price="220" data-sizeId="size7" data-quantityId="quantity7">Add to Cart</button>
+            </div>
+
+            <div class="section">
+                <img src="C:\Users\PC\OneDrive\Pictures\bonee fits website\Getadme 1 Fall Women Korean Fashion Vintage Tide Denim Rave Outfits 2 Piece Set Long Sleeve Jean Jacket + Y2K Gyaru Mini Pleated Skirts - Grey _ S.jpg" alt="Product 1">
+                <h3><center>long sleeve jean jacket & mini pleated skirts</center></h3>
+                <p>2220.00 php</p>
+                <div class="product-options">
+                    <label for="size8">Size:</label>
+                    <select id="size8" class="size-selector">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+    
+                    </select>
+                    <label for="quantity8">Quantity:</label>
+                    <input type="number" id="quantity8" class="quantity-input" min="1" value="1">
+                </div>
+                <button class="btn" data-name="long sleeve jean jacket & mini pleated skirts" data-price="2220" data-sizeId="size7" data-quantityId="quantity7">Add to Cart</button>
+            </div>
+            </div>
+
+
+
+            <h2> crowds favorite </h2>
+            <div class="sections">
+            <div class="section">
+                <img src="C:\Users\PC\OneDrive\Pictures\bonee fits website\jorts.jpg" alt="Product 1">
+                <h3> jorts </h3>
+                <p>210.00 php</p>
+                <div class="product-options">
+                    <label for="size9">Size:</label>
+                    <select id="size9" class="size-selector">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+    
+                    </select>
+                    <label for="quantity9">Quantity:</label>
+                    <input type="number" id="quantity9" class="quantity-input" min="1" value="1">
+                </div>
+                <button class="btn" data-name="jorts" data-price="210" data-sizeId="size9" data-quantityId="quantity9">Add to Cart</button>
+            </div>
+
+            <div class="section">
+                <img src="C:\Users\PC\OneDrive\Pictures\bonee fits website\Urban Chic Off Shoulder Blouse - M _ White.jpg" alt="Product 1">
+                <h3> blouse shoulder</h3>
+                <p>240.00 php</p>
+                <div class="product-options">
+                    <label for="size10">Size:</label>
+                    <select id="size10" class="size-selector">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+    
+                    </select>
+                    <label for="quantity10">Quantity:</label>
+                    <input type="number" id="quantity10" class="quantity-input" min="1" value="1">
+                </div>
+                <button class="btn" data-name="blouse shoulder" data-price="240" data-sizeId="size10" data-quantityId="quantity10">Add to Cart</button>
+            </div>
+
+
+            <div class="section">
+                <img src="C:\Users\PC\OneDrive\Pictures\bonee fits website\338a2fd0-f890-4ae9-a164-930c21228470.jpg" alt="Product 1">
+                <h3>leather skirt</h3>
+                <p>220.00 php</p>
+                <div class="product-options">
+                    <label for="size11">Size:</label>
+                    <select id="size11" class="size-selector">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+    
+                    </select>
+                    <label for="quantity11">Quantity:</label>
+                    <input type="number" id="quantity1" class="quantity-input" min="1" value="1">
+                </div>
+                <button class="btn" data-name="leather skirt" data-price="220" data-sizeId="size11" data-quantityId="quantity11">Add to Cart</button>
+            </div>
+
+            <div class="section">
+                <img src="C:\Users\PC\OneDrive\Pictures\bonee fits website\195604a3-5112-4317-ae2b-d5bf8ab11ff1.jpg" alt="Product 1">
+                <h3><center>corset tank top</center></h3>
+                <p>200.00 php</p>
+                <div class="product-options">
+                    <label for="size1">Size:</label>
+                    <select id="size1" class="size-selector">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+    
+                    </select>
+                    <label for="quantity12">Quantity:</label>
+                    <input type="number" id="quantity12" class="quantity-input" min="1" value="1">
+                </div>
+                <button class="btn" data-name="corset tank top" data-price="200" data-sizeId="size12" data-quantityId="quantity12">Add to Cart</button>
+            </div>
+
+
+        </div>
+            
+                
+            </div>
+        </div>
+    </div>
+    <footer>
+        <h3><i><p><center>"allow boonee fits reach your closet to achieve your fashion icon"</p></center></i></h3>
+        <h5><p><center>© 2024 <i>boonee fits</i>, All rights reserved.</p></center></h5>
+    </footer>
+    <script>
+        // JavaScript code
+        // Define cart array to store items
+        const cart = [];
+
+        // Function to add item to cart
+        function addToCart(name, price, size, quantity) {
+            // Check if item already exists in cart
+            const cartItem = cart.find(item => item.name === name && item.size === size);
+            if (cartItem) {
+                // If item exists, update quantity
+                cartItem.quantity += quantity;
+            } else {
+                // If item doesn't exist, add it to cart
+                cart.push({ name, price, size, quantity });
+            }
+            // Update cart icon and render cart dropdown
+            updateCartIcon();
+            renderCartDropdown();
+        }
+
+        // Function to remove item from cart
+        function removeFromCart(name, size) {
+            // Find index of item in cart
+            const itemIndex = cart.findIndex(item => item.name === name && item.size === size);
+            if (itemIndex !== -1) {
+                // If item found, remove it from cart
+                cart.splice(itemIndex, 1);
+                // Update cart icon and render cart dropdown
+                updateCartIcon();
+                renderCartDropdown();
+            }
+        }
+
+        // Function to update cart icon
+        function updateCartIcon() {
+            const cartIcon = document.querySelector('.cart-icon');
+            const cartItemCount = cart.reduce((total, item) => total + item.quantity, 0);
+            cartIcon.dataset.count = cartItemCount;
+            cartIcon.classList.toggle('has-items', cartItemCount > 0);
+        }
+
+        // Function to render cart dropdown
+        function renderCartDropdown() {
+            const cartDropdown = document.getElementById('cart-dropdown');
+            cartDropdown.innerHTML = ''; // Clear previous content
+            const cartList = document.createElement('div');
+            cartList.className = 'cart-list';
+
+            let totalPrice = 0; // Initialize total price
+
+            // Loop through each item in cart
+            cart.forEach(item => {
+                const cartItem = document.createElement('div');
+                cartItem.className = 'cart-item';
+                cartItem.innerHTML = `
+                    <h3>${item.name}</h3>
+                    <p>Price: ₱${item.price}</p>
+                    <p>Size: ${item.size}</p>
+                    <p>Quantity: ${item.quantity}</p>
+                    <button class="remove-btn" onclick="removeFromCart('${item.name}', '${item.size}')">Remove</button>
+                `;
+                cartList.appendChild(cartItem);
+
+                // Calculate subtotal for each item and add it to total price
+                const subtotal = item.price * item.quantity;
+                totalPrice += subtotal;
+            });
+
+            // Add total price to the cart dropdown
+            const totalElement = document.createElement('div');
+            totalElement.className = 'total';
+            totalElement.innerHTML = `<p>Total Price: ₱${totalPrice.toFixed(2)}</p>`;
+            cartList.appendChild(totalElement);
+
+            // Create and append "Proceed to Checkout" button
+            const checkoutButton = document.createElement('button');
+            checkoutButton.className = 'btn-proceed-to-checkout';
+            checkoutButton.textContent = 'Proceed to Checkout';
+            checkoutButton.addEventListener('click', proceedToCheckout);
+            cartList.appendChild(checkoutButton);
+
+            // Append cart list to cart dropdown
+            cartDropdown.appendChild(cartList);
+        }
+
+        // Function to handle clicking "Proceed to Checkout" button
+        function proceedToCheckout() {
+            // Your code to proceed to checkout
+            localStorage.setItem('cartItems', JSON.stringify(cart));
+            alert('Proceeding to checkout...');
+
+            window.location.href = "cart_summary.html";
+        }
+
+        // Function to highlight active link in navigation
+        function highlightLink(link) {
+            const navLinks = document.querySelectorAll('nav ul li a');
+            navLinks.forEach(navLink => {
+                navLink.classList.remove('active-link');
+            });
+            link.classList.add('active-link');
+        }
+
+        // Add event listener when DOM content is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            const addToCartButtons = document.querySelectorAll('.btn');
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const productName = button.parentNode.querySelector('h3').innerText;
+                    const priceText = button.parentNode.querySelector('p').innerText;
+                    const productPrice = parseFloat(priceText.replace(/[^\d.]/g, ''));
+                    const sizeId = button.dataset.sizeid;
+                    const quantityId = button.dataset.quantityid;
+                    const size = document.getElementById(sizeId).value;
+                    const quantity = document.getElementById(quantityId).value;
+                    addToCart(productName, productPrice, size, quantity);
+                    toggleCart();
+                });
+            });
+        });
+
+        // Function to toggle cart dropdown visibility
+        function toggleCart() {
+            const cartDropdown = document.getElementById('cart-dropdown');
+            if (cart.length > 0) {
+                renderCartDropdown();
+                cartDropdown.style.display = 'block';
+            } else {
+                cartDropdown.style.display = 'none';
+            }
+        }
+    </script>
+    
+    
+</body>
+</html>

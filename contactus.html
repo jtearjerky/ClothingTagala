@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background: #8f8dc7;
+            color: #321c6e;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: flex-start; /* Align items to the left */
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        nav ul li a:active {
+            color: rgb(83, 75, 248);
+            position: relative;
+            top: 2px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            gap: 20px; /* Add a gap between the contact info and image */
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            margin: auto; /* Center horizontally */
+            max-width: 600px; /* Set a maximum width */
+        }
+
+        .contact-info h1, .contact-info h2, .contact-info p {
+            margin: 10px 0;
+        }
+
+        .contact-info h2 {
+            color: #555;
+        }
+
+        .contact-info p {
+            color: #777;
+        }
+
+        .social-media {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .social-media a {
+            text-decoration: none;
+            color: #555;
+            margin: 0 10px;
+            font-size: 24px;
+            transition: color 0.2s ease;
+        }
+
+        .social-media a:hover {
+            color: #321c6e;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1><i>boonee fits</i></h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">home</a></li>
+                <li><a href="product.html">products</a></li>
+                <li><a href="cart_summary.html">cart</a></li>
+                <li><a href="aboutus.html">about us</a></li>
+                <li><a href="contactus.html">contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="contact-info">
+        <h1>Contact Us</h1>
+        <br>
+        <h2>Phone Number</h2>
+       <h1> <b><p>+63 123 233 2</p> </b> </h1>
+        <div class="social-media">
+            <h2>follow us in our social media plugins:
+            </h2>
+            <a href="https://www.facebook.com/official.newjeans" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://x.com/NewJeans_twt" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/newjeans_official/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        
+        header {
+            background: #8f8dc7;
+            color: #321c6e;
+            padding: 1rem 0;
+            text-align: center;
+            position: relative;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: flex-start;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        
+        nav ul li a:active {
+            color: rgb(83, 75, 248);
+            position: relative;
+            top: 2px;
+        }
+
+        .social-media {
+            margin-top: 1rem;
+        }
+
+        .social-media a {
+            color: #321c6e;
+            margin: 0 10px;
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .social-media a:hover {
+            color: #fff;
+        }
+
+        .section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            font-size: 23px;
+        }
+
+        .section img {
+            width: 350px;
+            height: 350px;
+            margin-bottom: 1rem;
+            border: 2px solid #8f8dc7;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .section p {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            max-width: 600px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1><i>boonee fits</i></h1>
+        <nav>
+            <ul>
+                <li><a href="home.html" onclick="highlightLink(this)">home</a></li>
+                <li><a href="product.html" onclick="highlightLink(this)">products</a></li>
+                <li><a href="cart_summary.html" onclick="highlightLink(this)">cart</a></li>
+                <li><a href="aboutus.html" onclick="highlightLink(this)">about us</a></li>
+                <li><a href="contactus.html" onclick="highlightLink(this)">contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="section">
+        <img src="C:\Users\PC\OneDrive\Pictures\bonee fits website\438064964_1172314723772964_2292438847526981772_n.jpg" alt="contact">
+        <p>
+            "As a girl who thinks that she has no fashion sense, by creating this brand, it will help not just me but as well as other
+            people to find their fashion style. I remember that I used to be so conscious about my outfit but as days go by, my confidence gets better
+            because I slowly found an outfit that makes me gain my confidence little by little." <br><br> - Li Ann Tagala, Founder of <i>boonee fits</i>
+        </p> 
+    </div>
+    <footer>
+        <center>
+        <div class="social-media">
+           <b><i> <p> follow us in our social media plugin:</p></i> </b>
+            <a href="https://www.facebook.com/official.newjeans" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://x.com/NewJeans_twt" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/newjeans_official/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <br>
+            <h5><p><center>© 2024 <i>boonee fits</i>, All rights reserved.</p></center></h5>
+        </center>
+        </div>
+
+    </footer>
+</body>
+</html>
